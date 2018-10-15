@@ -14,7 +14,7 @@
  */
 
 /* Path to the WordPress codebase you'd like to test. Add a backslash in the end. */
-define( 'ABSPATH', '/app/tests/core' );
+define( 'ABSPATH', '/app/tests/core/' );
 
 // Test with WordPress debug mode (default).
 define( 'WP_DEBUG', true );

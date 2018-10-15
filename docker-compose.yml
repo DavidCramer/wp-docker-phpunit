@@ -27,7 +27,7 @@ services:
     ports:
         - 3306
     volumes:
-        - ./wp-tests/db:/var/lib/mysql:rw
+        - ./tests/db:/var/lib/mysql:rw
     environment:
         MYSQL_DATABASE: wptests
         MYSQL_PASSWORD: wptests
