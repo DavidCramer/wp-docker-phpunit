@@ -2,3 +2,6 @@ public
 sql
 vendor
 wpcs
+tests/core
+tests/data
+tests/includes
