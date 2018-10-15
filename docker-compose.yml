@@ -1,0 +1,35 @@
+version: '3.6'
+
+services:
+
+### WordPress PHP ###############################################
+
+  tests-php:
+    image: wptools/php-dev
+    volumes:
+      - ./:/app
+      - ./tests:/app/tests:rw
+      - ${WP_INSTALL_DIR}/wp-content:/app/tests/core/wp-content
+    depends_on:
+      - tests-mysql
+    working_dir: "/app/tests"
+    environment:
+        WP_VERSION: 4.9.6
+        WP_DOMAIN: wordpress-tests.local
+        WP_MULTISITE: "false"
+        WP_MYSQL_DATABASE: wptests
+        WP_MYSQL_PASSWORD: wptests
+        WP_MYSQL_USER: wptests
+
+### WordPress Mysql ###############################################
+  tests-mysql:
+    image: mariadb:10.3
+    ports:
+        - 3306
+    volumes:
+        - ./wp-tests/db:/var/lib/mysql:rw
+    environment:
+        MYSQL_DATABASE: wptests
+        MYSQL_PASSWORD: wptests
+        MYSQL_ROOT_PASSWORD: wptests
+        MYSQL_USER: wptests
