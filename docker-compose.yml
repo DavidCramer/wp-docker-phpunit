@@ -7,9 +7,9 @@ services:
   tests-php:
     image: wptools/php-dev
     volumes:
-      - ./:/app
+      - ../:/app
       - ./tests:/app/tests:rw
-      - ${WP_INSTALL_DIR}/wp-content:/app/tests/core/wp-content
+      - ${WP_INSTALL_DIR}:/app/tests/core
     depends_on:
       - tests-mysql
     working_dir: "/app/tests"
@@ -23,6 +23,7 @@ services:
 
 ### WordPress Mysql ###############################################
   tests-mysql:
+
     image: mariadb:10.3
     ports:
         - 3306
