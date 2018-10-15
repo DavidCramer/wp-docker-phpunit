@@ -1,5 +1,0 @@
-#!/bin/sh
-
-cd core
-wp core download --version=$WP_VERSION --skip-content
-#read -n1 -r -p "Press any key to continue..." key

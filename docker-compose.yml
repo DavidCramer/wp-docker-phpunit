@@ -12,9 +12,9 @@ services:
       - ${WP_INSTALL_DIR}:/app/tests/core
     depends_on:
       - tests-mysql
-    working_dir: "/app/tests"
+    working_dir: "/app"
     environment:
-        WP_VERSION: 4.9.6
+        WP_VERSION: ${WP_VERSION}
         WP_DOMAIN: wordpress-tests.local
         WP_MULTISITE: "false"
         WP_MYSQL_DATABASE: wptests
