@@ -5,6 +5,8 @@ services:
 ### WordPress PHP ###############################################
 
   tests-php:
+    env_file:
+      - .env
     image: wptools/php-dev
     volumes:
       - ../:/app
