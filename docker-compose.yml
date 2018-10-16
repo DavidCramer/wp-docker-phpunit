@@ -9,7 +9,7 @@ services:
     volumes:
       - ../:/app
       - ./tests:/app/tests:rw
-      - ${WP_INSTALL_DIR}:/app/tests/core
+      - ${WP_INSTALL_DIR}:/app/public
     depends_on:
       - tests-mysql
     working_dir: "/app"
