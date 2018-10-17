@@ -7,3 +7,4 @@ tests/data
 tests/includes
 tests/db
 .env
+tests/uploads
