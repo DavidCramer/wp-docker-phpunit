@@ -6,3 +6,4 @@ tests/core
 tests/data
 tests/includes
 tests/db
+.env
