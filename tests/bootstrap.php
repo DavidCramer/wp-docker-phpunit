@@ -7,7 +7,7 @@
 
 $_tests_dir = getenv( 'WP_TESTS_DIR' );
 if ( empty( $_tests_dir ) ) {
-	$_tests_dir = '/app/phpunit/tests';
+	$_tests_dir = '/app/tests';
 }
 
 // Give access to tests_add_filter() function.

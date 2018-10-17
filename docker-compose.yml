@@ -13,6 +13,7 @@ services:
       - ./tests:/app/tests:rw
       - ${WP_INSTALL_DIR}:/app/public
       - ./tests/uploads:/app/public/wp-content/uploads:rw
+      - ./vendor:/app/vendor/
     depends_on:
       - tests-mysql
     working_dir: "/app"
