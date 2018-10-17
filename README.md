@@ -1,5 +1,7 @@
 # wp-docker-phpunit
 
+Video of this setup https://youtu.be/l92ZSPBqN6U 
+
 Quick Setup:
 
 Clone repo to the root of your PhpStorm Project.
